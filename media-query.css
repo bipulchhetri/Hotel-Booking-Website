@@ -1,0 +1,112 @@
+/* Responsive design for Navbar and Hamburger*/
+@media screen and (max-width: 768px) {
+    .navbar{
+        background-color: black;
+        color: white;
+    }
+    .navbar .logo a {
+        color: rgb(246, 246, 246);
+    }
+    .hamburger span {
+        background-color: #f5efef;
+    }
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #f6f4f4;
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease;
+        transform: translateY(-100%);
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+}
+
+
+
+/* Card section */
+@media screen and (max-width: 768px) {
+    .card-section {
+        gap: 15px;
+        padding: 40px 10px;
+    }
+
+    .card {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-section {
+        gap: 10px;
+        padding: 30px 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+
+/* Hote  */
+@media (max-width: 768px) {
+    .hotel-card {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hotel-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .slider-container {
+        height: 150px;
+    }
+}
+
+
+
+/* FOOTER  */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
